@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <button id="back-button" aria-label="Go back">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <h1 id="converter-title">Converter</h1>
+      <button id="language-toggle" aria-label="Toggle language">🌐</button>
+    </header>
+
+    <main class="converter-container">
+      <section class="category-info">
+        <h2 id="category-name">Category</h2>
+        <p id="category-history">Loading history...</p>
+      </section>
+
+      <section class="converter-input">
+        <div class="input-group">
+          <input type="number" id="input-value" placeholder="Enter value" />
+          <select id="from-unit"></select>
+        </div>
+      </section>
+
+      <section class="results-container">
+        <h3 id="results-title">Results</h3>
+        <div class="results-grid" id="results-grid">
+          <!-- Results will be populated by JavaScript -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p id="footer-text">Created by Ali Alqahtani</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
