@@ -1004,7 +1004,7 @@ function applyLanguage() {
 
 function getTranslation(key) {
   // Split key by dots to navigate through the translation object
-  const keys = key.split('.');
+  const keys = key.split('.'); // for example categories.area.history = [categories, area, history]
   let value = translations[currentLanguage];
 
   for (const k of keys) {
@@ -1017,6 +1017,7 @@ function getTranslation(key) {
 
   return value;
 }
+
 function initHomePage() {
   document
     .getElementById('language-toggle')
@@ -1081,7 +1082,6 @@ function initHomePage() {
   document.getElementById('start-now').addEventListener('click', function () {
     window.location.href = 'categories.html';
   });
-
 
   document
     .getElementById('start-now')
@@ -1148,8 +1148,6 @@ function initConverterPage() {
     window.location.href = 'index.html';
     return;
   }
-
-  // console.log(currentCategory);
 
   // Set up back button
   const backButton = document.getElementById('back-button');
@@ -1250,7 +1248,7 @@ function convertUnits(value, fromUnit) {
 
       resultCard.innerHTML = `
                 <h4>${unitName}</h4>
-                <p class="result-value">${convertedValue.toFixed(3)}</p>
+                <p class="result-value">${convertedValue.toFixed(2)}</p>
                 <p class="unit-history">${unitHistory}</p>
             `;
 
